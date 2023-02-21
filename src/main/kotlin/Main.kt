@@ -10,9 +10,10 @@ fun main(args: Array<String>) {
     }
 
     while (true) {
-        if (readLine().equals("/help")) {
+        val input = readLine()
+        if (input.equals("/help")) {
             println("Доступные команды:\n/start - начало работы.\n/help - вызов справки по командам.\n/end - завершение работы и выход из программы.")
-        } else if (readLine().equals("/end")) {
+        } else if (input.equals("/end")) {
             println("До свидания. Хорошего дня")
             break
         } else {
