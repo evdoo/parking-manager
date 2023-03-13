@@ -1,8 +1,12 @@
+import main.kotlin.Command
+import main.kotlin.Manager
+
+private val manager: Manager = Manager()
 fun main(args: Array<String>) {
 
     while (true) {
         when (readLine()) {
-            "/start" -> {
+            Command.START.command -> {
                 println("Здравствуйте! Введите команду:")
                 break
             }
@@ -12,13 +16,13 @@ fun main(args: Array<String>) {
 
     while (true) {
         when (readLine()) {
-            "/help" -> {
+            Command.HELP.command -> {
                 println("Доступные команды:")
                 println("/start - начало работы.")
                 println("/help - вызов справки по командам.")
                 println("/end - завершение работы и выход из программы.")
             }
-            "/end" -> {
+            Command.END.command -> {
                 println("До свидания. Хорошего дня")
                 break
             }
